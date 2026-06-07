@@ -1,0 +1,17 @@
+#cloud-config
+---
+ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ1xZW/Ym4htY8lCsYtBhqO/U6jCAJamc6t+aHKnHPod admin@WSL
+hostname: lit002
+fqdn: lit002.kvm.local
+prefer_fqdn_over_hostname: true
+manage_etc_hosts: true
+user: cloud
+chpasswd:
+  list: |
+    root:abc123!
+    cloud:abc123!
+  expire: False
+runcmd:
+  - sleep 30
+...

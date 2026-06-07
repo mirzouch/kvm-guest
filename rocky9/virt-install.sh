@@ -1,0 +1,12 @@
+sudo virt-install \
+    --name lit001 \
+    --osinfo rocky9 \
+    --machine q35 \
+    --virt-type kvm \
+    --vcpus 2 \
+    --memory 2048 \
+    --disk /mnt/d/kvm/lit001/Rocky-9-GenericCloud-LVM.latest.x86_64.qcow2,device=disk,bus=virtio,format=qcow2 \
+    --cloud-init 'user-data=user-data,meta-data=meta-data,network-config=network-config' \
+    --network network=default \
+    --graphics vnc,listen=0.0.0.0,port=-1 \
+    --import
