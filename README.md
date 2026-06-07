@@ -2,8 +2,8 @@
 
 ## requirements
 
-KVM guest directory: /mnt/d/kvm
-KVM guest images : /mnt/d/kvm/images
+KVM guest directory: /mnt/d/kvm  
+KVM guest images : /mnt/d/kvm/images  
 
 Download images:
 ````
